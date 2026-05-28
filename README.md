@@ -7,6 +7,6 @@ Analyse the results of the data role skills activity [(survey)](https://forms.gl
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-python3 -m pip install < requirements.txt
+python3 -m pip install --requirements < requirements.txt
 python3 skills-roles-analysis.py
 ```
