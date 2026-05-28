@@ -1,0 +1,19 @@
+skill,description,Data steward,Data archivist,Data librarian,Data curator,Data manager,Data engineer,Data scientist
+Data modelling and design,"Ability to plan, architect and implement data systems using appropriate data formats that satisfy research requirements and manage data assets.",3,0,0,0,0,1,1
+Data and database management,"Ability to effectively select a data storage system and store, retrieve, manage and analyse information within it.",,,,,1,1,1
+Data and database query languages,Proficiency in data or database query languages for managing and manipulating data.,,,,,1,1,1
+Data acquisition,"Ability to identify, collect and process data effectively using suitable methods, tools and protocols.",1,1,1,1,1,0,0
+Data cleaning,"Ability to identify, correct and remove errors, inconsistencies and missing values from datasets.",1,1,1,1,1,1,1
+Data wrangling ,"Ability to transform raw, messy data into clean, structured formats suitable for analysis, including cleaning, reshaping, enriching, transforming and integrating data from multiple sources.",,,,,1,1,1
+Data curation,"Ability to steward and enrich data to ensure it is accurate, well-annotated, properly documented, accessible and preserved for long-term reuse.",1,1,1,1,0,0,0
+Metadata standards,"Ability to understand and utilise metadata to ensure data quality, consistency and discoverability.",1,2,1,3,1,1,0
+Data protection and ethics,Understanding of data protection frameworks and measures to ensure secure and ethical data handling practices.,1,3,1,1,3,0,0
+Data lifecycle management,"Ability to effectively manage data throughout its lifecycle, encompassing planning, collection, organisation, processing, storage, preservation and sharing, ensuring data quality, accessibility, compliance, protection and reuse. ",1,0,0,0,1,0,0
+Digitisation of text and images,"Converting physical or analog materials (such as printed documents or photographs) into digital formats making them easier to store, process and share electronically.",0,1,2,3,0,0,0
+Computational scientific workflows (data pipelines),Ability to design and implement automated sequences of data processing steps that move and transform data between systems - typically within Workflow Management Systems (WMS) using workflow definition languages.  ,0,0,0,0,0,1,1
+Data analysis,"Ability to process, analyse and interpret data using mathematical and statistical methods.",0,0,0,0,0,1,1
+Data visualisation,Ability to facilitate understanding of data and communicate data analysis findings effectively through visual representations.,0,0,0,0,1,1,1
+Data mining,"Ability to discover patterns and insights from large sets of data, using techniques from statistics, machine learning and database systems. ",0,0,0,0,0,2,3
+Big data technologies,Proficiency in using big data frameworks and methodologies for managing and processing large datasets.,0,0,0,0,0,0,1
+AI/ML concepts and theory,Ability to understand and apply fundamental concepts underlying AI/ML systems and applications.,0,0,0,0,0,0,1
+AI/ML models and technologies,"Ability to design, build, test, and deploy machine learning models and systems as software applications",0,0,0,0,0,0,2
