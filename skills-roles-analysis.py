@@ -14,10 +14,10 @@ from scipy.spatial.distance import pdist
 
 # Google Sheet ID
 # Replace with your own sheet ID
-google_sheet_id = "13mr_ZsaJKf0sG7Qk7qIl6ArohvDde_44FTxiAcgaBbk"
+google_sheet_id = "12dhIpaEk2jpWvLNCBnGvuBEBQoiP1VISsbnSFMVHeG4"
 
 # Optional: worksheet/tab name
-sheet_name = "Sheet2"
+sheet_name = "Reshaped"
 
 role_columns = [
     "Data steward",
