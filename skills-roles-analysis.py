@@ -1,6 +1,7 @@
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
+import numpy as np
 
 from sklearn.metrics import jaccard_score
 from sklearn.metrics.pairwise import cosine_similarity
@@ -16,7 +17,7 @@ from scipy.spatial.distance import pdist
 google_sheet_id = "13mr_ZsaJKf0sG7Qk7qIl6ArohvDde_44FTxiAcgaBbk"
 
 # Optional: worksheet/tab name
-sheet_name = "Sheet1"
+sheet_name = "Sheet2"
 
 role_columns = [
     "Data steward",
@@ -63,9 +64,9 @@ roles_df = df[role_columns]
 # Convert to numeric
 roles_df = roles_df.fillna(0)
 roles_df = roles_df.apply(pd.to_numeric, errors='coerce')
-roles_df = roles_df.astype(int)
+roles_df = roles_df.round(0).astype(np.int64)
 
-print("\nRole data preview:")
+print("\nClean and rounded role data preview:")
 print(roles_df.head(10))
 
 # =========================================================
@@ -74,6 +75,8 @@ print(roles_df.head(10))
 
 # Create binary dataframe
 binary_df = (roles_df > 0).astype(int)
+print("\nBinary data preview:")
+print(binary_df.head(10))
 
 roles = binary_df.columns
 
@@ -142,11 +145,9 @@ plt.show()
 # PART 2 — COMPETENCY LEVEL ANALYSIS
 # =========================================================
 
-numeric_df = roles_df.copy()
-
 # Cosine similarity
 cosine_matrix = cosine_similarity(
-    numeric_df.T
+    roles_df.T
 )
 
 cosine_df = pd.DataFrame(
@@ -180,9 +181,9 @@ plt.show()
 # -----------------------------
 
 # Remove constant columns for stability
-cluster_df = numeric_df.loc[
+cluster_df = roles_df.loc[
     :,
-    numeric_df.nunique() > 1
+    roles_df.nunique() > 1
 ]
 
 sns.clustermap(
