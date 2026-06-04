@@ -192,4 +192,54 @@ sns.clustermap(
     figsize=(14, 8)
 )
 
+# plt.show()
+
+# ----------------------------------
+# RADAR CHART
+# ----------------------------------
+
+# Use competency levels
+radar_df = roles_df.fillna(0)
+
+categories = skills.tolist()
+N = len(categories)
+
+angles = np.linspace(
+    0,
+    2 * np.pi,
+    N,
+    endpoint=False
+).tolist()
+
+angles += angles[:1]
+
+fig, ax = plt.subplots(
+    figsize=(12, 12),
+    subplot_kw=dict(polar=True)
+)
+
+for role in role_columns:
+
+    values = radar_df[role].tolist()
+    values += values[:1]
+
+    ax.plot(
+        angles,
+        values,
+        linewidth=1,
+        label=role
+    )
+
+ax.set_xticks(angles[:-1])
+ax.set_xticklabels(categories, fontsize=8)
+
+ax.set_title(
+    "Competency Profiles by Role",
+    pad=30
+)
+
+ax.legend(
+    bbox_to_anchor=(1.3, 1.1)
+)
+
 plt.show()
